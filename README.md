@@ -1,6 +1,12 @@
 # NEW ScloudJS
 
 原作（https://github.com/Frezledz/newscloudjs）に感謝いたします。
+このフォークは原作を自分に使いやすいように少し改造したものです。
+
+# 改造点
+・現在作成中
+・websocketを切断する処理を追加
+
 
 ### 日本語
 
