@@ -20,6 +20,16 @@ const _connect = ()=>{
         }
     })
 }
+
+const _disconnect = ()=>{
+    if(Socket.readyState === WebSocket.OPEN || Socket.readyState === WebSocket.CONNECTING){
+        Socket.close();
+        console.log("websocket接続を切断しました。");
+    }else{
+        console.log("既に切断されています。");
+    }
+}
+
 const _handshake = ()=>{
     Socket.send(
         `${JSON.stringify(
@@ -60,6 +70,7 @@ const _setpredata = (clouds)=>{
 }
 module.exports = {
     connect:_connect,
+    disconnect:_disconnect,
     handshake:_handshake,
     sendtocloud:_sendtocloud,
     parsedata:_parsedata,
