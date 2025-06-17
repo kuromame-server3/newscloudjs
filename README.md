@@ -3,12 +3,12 @@
 原作（https://github.com/Frezledz/newscloudjs）に感謝いたします。
 このフォークは原作を自分に使いやすいように少し改造したものです。
 
-# 改造点
+### 改造点
 ・現在作成中
 ・websocketを切断する処理を追加
 
 
-### 日本語
+# 日本語
 
 
 ## システム要件
@@ -21,7 +21,7 @@ npm i scloudjs
 ```
 2. Javascriptを使用し、いくつかのコードを作成します。
 
-# コードの例
+## コードの例
 ```
 const scloudjs = require("scloudjs"); //Able to use ScloudJS as a module
 let clouddatas = new Object();//Cloud variable's data will be written here
@@ -64,7 +64,7 @@ npm i scloudjs
 ```
 2. Create javascript and write a few codes
 
-# Code examples
+## Code examples
 ```
 const scloudjs = require("scloudjs"); //Able to use ScloudJS as a module
 let clouddatas = new Object();//Cloud variable's data will be written here
