@@ -4,12 +4,35 @@
 [https://github.com/Frezledz/newscloudjs]
 に感謝いたします。
 
-このフォークは原作を自分に使いやすいように少し改造したものです。
+このフォークは原作を自分が使いやすいように少し改造したものです。
 
 ### 改造点
-・現在作成中
 ・websocketを切断する処理を追加
+   ・この機能によって定期的にログインとログアウトを繰り返すことで、接続を常時安定化することに成功
 
+### 改造して追加した関数の使い方
+
+```
+//接続安定用のインターバル
+var isS; //通信しているかのフラグ
+
+setInterval(async () => {
+  if (isS) return;
+  isS = true; // 通信開始フラグ
+
+  try {
+    await scloudjs.disconnect(); // もし非同期なら await
+    await func();                // 再接続処理など（下の原作のコードの例のfuncを参照）
+    console.log("再接続成功");
+  } catch (err) {
+    console.log("再接続エラー:", err);
+  } finally {
+    isS = false; // 処理完了でフラグを戻す
+  }
+}, 60 * 2000); // 2分ごと
+```
+
+# ↓↓これより下は原作の説明
 
 # 日本語
 
