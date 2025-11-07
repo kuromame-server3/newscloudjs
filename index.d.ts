@@ -1,5 +1,7 @@
 /**Connect to cloud variables server. */
 declare var connect:()=>Promise<void>;
+/**Disconnect to a Scratch project*/
+declare var disconnect:()=>void;
 /**Connect to a Scratch project */
 declare var handshake:()=>void;
 /**Change the value of cloud variables. */
