@@ -8,6 +8,7 @@ const setdatas = require("./libraries/setdata").setdatas;
 module.exports = (
     {
         connect,
+        disconnect,
         handshake,
         sendtocloud,
         login,
