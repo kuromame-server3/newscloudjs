@@ -1,4 +1,5 @@
 const connect = require("./libraries/cloud").connect;
+const disconnect = require("./libraries/cloud").disconnect;
 const handshake = require("./libraries/cloud").handshake;
 const sendtocloud = require("./libraries/cloud").sendtocloud;
 const parsedata = require("./libraries/cloud").parsedata;
